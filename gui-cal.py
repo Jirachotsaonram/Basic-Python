@@ -33,7 +33,7 @@ def Cal():
 	try:
 		quan = float(v_quantity.get())
 		fish = float (v_fish.get())
-		calc = quan * fish # a บาทต่อกิโล * จำนวนปลาที่กรอกมา
+		calc = quan * fish # เป็นตัวแปรที่เก็บช่องข้อความที่1 * เป็นตัวแปรที่เก็บตัวแปรช่องที่2
 		messagebox.showinfo('ราคาทั้งหมด','ราคาปลาทั้งหมด {} บาท'.format(calc) )
 		v_quantity.set('')
 		E1.focus()
