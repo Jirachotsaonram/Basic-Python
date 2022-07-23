@@ -9,8 +9,8 @@ colors =['red','blue']
 
 
 def up():
-    t.setheading(90)
-    t.forward(100)
+    t.setheading(90) #เป็นที่เปลี่ยนทิศทาง
+    t.forward(100) #เป็นคำสั่งเดินหน้า
 
 def down():
     t.setheading(270)
@@ -39,4 +39,4 @@ turtle.onkey(down, 'Down')
 turtle.onkey(left, 'Left')
 turtle.onkey(right, 'Right')
 
-turtle.mainloop()
+turtle.mainloop() #เพื่อให้ระบบทำงานตลอดเวลา
