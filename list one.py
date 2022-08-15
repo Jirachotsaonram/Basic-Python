@@ -1,17 +1,15 @@
 
-
-
-class Node:
+class Node:  #การสร้างคลาสโหนดของลิงค์ลิสต์เดี่ยว
     def __init__(self,data):
         self.data = data
         self.next = None
-class LinkedList:
+class LinkedList:  #การสร้างคลาสลิงค์ลิสต์เดี่ยว
     def __init__(self):
         self.head = None
         self.tail = None
-    def isEmpty(self):
+    def isEmpty(self):  #ฟังก์ชันตรวจสอบว่าลิงค์ลิสต์เดี่ยวว่างหรือไม่
         return self.head == None
-    def add_begin(self,data):
+    def add_begin(self,data):  #ฟังก์ชันการเพิ่มโหนดแรกของลิงคืลิสต์เดี่ยว
         new_node = Node(data)
         if self.head == None:
             self.head = self.tail = new_node
@@ -25,7 +23,7 @@ class LinkedList:
         else:
             self.tail.next = new_node
             self.tail = new_node
-    def add_middle(self,data,position):
+    def add_middle(self,data,position):  
         new_node = Node(data)
         current_node = self.head
         previous_node = None
@@ -100,5 +98,3 @@ mylist.remove_middle(2)
 print("Singly Linked List =")
 mylist.display()
 mylist.search("Friday")
-
-
