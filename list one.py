@@ -16,14 +16,14 @@ class LinkedList:  #การสร้างคลาสลิงค์ลิส
         else:
             new_node.next = self.head
             self.head = new_node
-    def add_end(self,data):
+    def add_end(self,data):   #เพิ่มโหนดต่อจากโหนดสุท้ายของลิงค์ลิสต์
         new_node = Node(data)
         if self.head == None:
             self.head = self.tail = new_node
         else:
             self.tail.next = new_node
             self.tail = new_node
-    def add_middle(self,data,position):  
+    def add_middle(self,data,position):   #เพิ่มโหนดที่อยู่ตรงกลางของลิงค์ลิสต์เดี่ยว
         new_node = Node(data)
         current_node = self.head
         previous_node = None
@@ -36,17 +36,17 @@ class LinkedList:  #การสร้างคลาสลิงค์ลิส
                 current_node = previous_node.next
                 previous_node.next = new_node
                 new_node.next = current_node
-    def size(self):
+    def size(self):  #หาจำนวนของข้อมูลในลิงค์ลิสต์เดี่ยว
         current_node = self.head
         count = 0
         while current_node !=None:
             count +=1
             current_node = current_node.next
         return count
-    def remove_begin(self):
+    def remove_begin(self):  #ลบโหนดแรกของลิงค์ลิสต์เดี่ยว
         current_node = self.head
         self.head = current_node.next
-    def remove_end(self):
+    def remove_end(self):  #ลบโหนดสุดท้ายของลิงค์ลิสต์เดี่ยว
         current_node = self.head
         previous_node = None
         count = 0
@@ -57,7 +57,7 @@ class LinkedList:  #การสร้างคลาสลิงค์ลิส
         current_node = previous_node.next
         previous_node.next = current_node.next
         self.tail = previous_node
-    def remove_middle(self,position):
+    def remove_middle(self,position):  #ลบโหนดตรงกลางลิงค์ลิสต์เดี่ยว
         current_node = self.head
         previous_node = None
         current_position = 0
@@ -69,7 +69,7 @@ class LinkedList:  #การสร้างคลาสลิงค์ลิส
                 current_node = previous_node.next
                 next_node = current_node.next
                 previous_node.next = next_node
-    def search(self,data):
+    def search(self,data): #ค้นหาโหนดของลิงค์ลิสต์เดี่ยว
         current_node = self.head
         found = False
         while current_node != None and not found:
